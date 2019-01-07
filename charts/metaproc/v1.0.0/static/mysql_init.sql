@@ -1,0 +1,13 @@
+DROP SCHEMA IF EXISTS ebx;
+CREATE SCHEMA ebx DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP SCHEMA IF EXISTS eagent;
+CREATE SCHEMA eagent DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP SCHEMA IF EXISTS invoice;
+CREATE SCHEMA invoice DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP USER IF EXISTS 'eagent'@'%';
+DROP USER IF EXISTS 'eagent'@'localhost';
+CREATE USER 'eagent'@'%' IDENTIFIED BY  'Hop_7531';
+CREATE USER 'eagent'@'localhost' IDENTIFIED BY  'Hop_7531';
+grant all on *.* to 'eagent'@'%' ;
+grant all on *.* to 'eagent'@'localhost' ;
+grant process on *.* to eagent;
