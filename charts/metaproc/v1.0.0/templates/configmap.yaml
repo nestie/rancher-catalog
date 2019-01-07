@@ -4,5 +4,5 @@ metadata:
   name: mp-configmap
 data:
   MYSQL_ROOT_PASSWORD: "start432"
-  initdb.sql: |
-{{.Files.Get "static/mysql_init.sql" | printf "%s" | indent 4}}
+  initdb.sql: |-
+{{ .Files.Get "static/mysql_init.sql" | printf "%s" | indent 4}}
