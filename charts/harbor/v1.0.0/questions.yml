@@ -1,0 +1,56 @@
+categories:
+- Repository
+questions:
+- variable: externalURL
+  default: ""
+  description: "URL of the Harbor Core"
+  label: External URL
+  type: string
+  group: "External URLs"
+- variable: expose.ingress.hosts.core
+  default: ""
+  description: "DNS Name of the Harbor Repository"
+  label: Harbor DNS Name
+  type: string
+  group: "External URLs"
+- variable: expose.ingress.hosts.notary
+  default: ""
+  description: "DNS Name of the Harbor Notary Service"
+  label: Notary DNS Name
+  type: string
+  group: "External URLs"
+- variable: persistence.persistentVolumeClaim.registry.existingClaim
+  default: "harbor-registry"
+  description: "Persistent Volume Name (must exist)"
+  type: string
+  required: true
+  label: Registry Persistent Volume
+  group: "Storage"
+- variable: persistence.persistentVolumeClaim.chartmuseum.existingClaim
+  default: "harbor-chartmuseum"
+  description: "Persistent Volume Name (must exist)"
+  type: string
+  required: true
+  label: Chartmuseum Persistent Volume
+  group: "Storage"
+- variable: persistence.persistentVolumeClaim.jobservice.existingClaim
+  default: "harbor-jobservice"
+  description: "Persistent Volume Name (must exist)"
+  type: string
+  required: true
+  label: Jobservice Persistent Volume
+  group: "Storage"
+- variable: persistence.persistentVolumeClaim.database.existingClaim
+  default: "harbor-database"
+  description: "Persistent Volume Name (must exist)"
+  type: string
+  required: true
+  label: Database Persistent Volume
+  group: "Storage"
+- variable: persistence.persistentVolumeClaim.redis.existingClaim
+  default: "harbor-redis"
+  description: "Persistent Volume Name (must exist)"
+  type: string
+  required: true
+  label: Redis Persistent Volume
+  group: "Storage"
