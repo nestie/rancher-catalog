@@ -5,10 +5,9 @@ mysqlRootPassword: start123
 
 replicaCount: 1
 
-image:
-  repository: nginx
-  tag: stable
-  pullPolicy: IfNotPresent
+image: mysql
+imageTag: 5.7
+imagePullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
