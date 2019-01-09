@@ -1,0 +1,9 @@
+categories:
+- Database
+questions:
+- variable: mysqlRootPassword
+  default: ""
+  description: "MYSQL_ROOT_PASSWORD"
+  label: MySQL root Password
+  type: string
+  group: "MySQL Settings"
